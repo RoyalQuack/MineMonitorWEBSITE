@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModMonitor - Discord Bot</title>
+    <link rel="icon" type="image/png" href="fav.png">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ModMonitor - Discord Bot">
+    <meta property="og:description" content="Your ultimate Discord companion for tracking and managing Minecraft mod updates. Stay ahead of the game with real-time notifications about your favorite mods and modpacks.">
+    <meta property="og:image" content="https://monitor.quackstudios.dev/fav.png">
+    <meta property="og:url" content="https://monitor.quackstudios.dev">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#7289DA">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+        }
+
+        .logo {
+            font-size: 6rem;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #7289da, #99aab5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: bold;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: #99aab5;
+            margin-bottom: 2rem;
+        }
+
+        .invite-button {
+            background-color: #7289da;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .invite-button:hover {
+            background-color: #5b6eae;
+        }
+
+        .free-label {
+            margin-top: 1rem;
+            font-size: 1rem;
+            color: #99aab5;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .description {
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .description h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #7289da;
+        }
+
+        .description p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #99aab5;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            .tagline {
+                font-size: 1.2rem;
+            }
+            .logo {
+                font-size: 4rem;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2a2a2a;
+            margin-top: 2rem;
+        }
+
+        .footer p {
+            color: #99aab5;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            color: #7289da;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #5b6eae;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="logo">👀</div>
+        <h1 class="title">ModMonitor</h1>
+        <p class="tagline">Mod and Modpack Community Updates, made easier.</p>
+        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+            <a href="https://discord.com/oauth2/authorize?client_id=1353733722331021312&permissions=1689539202976832&integration_type=0&scope=bot+applications.commands" class="invite-button" target="_blank">Add to Discord</a>
+            <a href="wiki.html" class="invite-button" style="background-color: #99aab5;">View Wiki</a>
+        </div>
+        <p class="free-label">✨ Free Forever ✨</p>
+    </section>
+
+    <section class="description">
+        <h2>What is ModMonitor?</h2>
+        <p>ModMonitor is your ultimate Discord companion for tracking and managing Minecraft mod updates. Stay ahead of the game with real-time notifications about your favorite mods and modpacks.</p>
+        
+        <h2>For Developers</h2>
+        <p>ModMonitor empowers mod developers with powerful tools to keep their community engaged. Our webhook integration system allows you to automatically notify your users about new releases, ensuring your updates reach your audience instantly. With our comprehensive API and automated version tracking, you can focus on development while we handle update notifications and community engagement.</p>
+
+        <h2>For Players</h2>
+        <p>Never miss an update for your favorite mods again! ModMonitor simplifies the mod management experience by providing real-time notifications directly in your Discord server. Stay informed about version updates, compatibility changes, and new features with our customizable notification system. Whether you're running a single mod or managing a complex modpack, ModMonitor keeps you in the loop with detailed changelogs and seamless update tracking.</p>
+    </section>
+
+    <footer class="footer">
+        <p>Website and Bot developed by RoyalQuack</p>
+        <p>Join our community: <a href="https://discord.quackstudios.dev/" target="_blank">QuackStudios Discord</a></p>
+    </footer>
+</body>
+</html>

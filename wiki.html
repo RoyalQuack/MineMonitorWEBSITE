@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModMonitor Wiki - Discord Bot</title>
+    <link rel="icon" type="image/png" href="fav.png">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ModMonitor Wiki - Discord Bot">
+    <meta property="og:description" content="Documentation and guides for ModMonitor Discord bot. Learn how to track and manage Minecraft mod updates effectively.">
+    <meta property="og:image" content="https://monitor.quackstudios.dev/fav.png">
+    <meta property="og:url" content="https://monitor.quackstudios.dev/wiki">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#7289DA">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: #2a2a2a;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        .header a {
+            color: #7289da;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .header a:hover {
+            color: #5b6eae;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            color: #7289da;
+            margin-bottom: 1.5rem;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            color: #7289da;
+            margin: 2rem 0 1rem;
+        }
+
+        .content p {
+            color: #99aab5;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2a2a2a;
+            margin-top: 2rem;
+        }
+
+        .footer p {
+            color: #99aab5;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            color: #7289da;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #5b6eae;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">← Back to Home</a>
+    </header>
+
+    <main class="content">
+        <h1>ModMonitor Wiki</h1>
+        <p>Welcome to the ModMonitor documentation! Here you'll find everything you need to know about using ModMonitor to track and manage your Minecraft mod updates.</p>
+
+        <h2>Getting Started</h2>
+        <p>To start using ModMonitor, invite the bot to your Discord server using the invite link on our homepage. Once the bot is in your server, you can use the following commands:</p>
+
+        <h3>/monitorhere</h3>
+        <p>Set up the current channel as a notification channel for mod updates. This is where ModMonitor will send notifications about mod updates.</p>
+
+        <h3>/addproject</h3>
+        <p>Add a new mod or modpack to tracking through <a href="https://modrinth.com" target="_blank">Modrinth</a>. The command format is <code>/addproject [slug]</code>, where the slug can be found in the mod's Modrinth URL (e.g., for https://modrinth.com/mod/sodium, the slug would be "sodium"). ModMonitor checks for updates every minute to ensure you're always notified of the latest versions.</p>
+
+        <h3>/removeproject</h3>
+        <p>Remove a mod or modpack from your tracking list. The command format is <code>/removeproject [slug]</code>, where the slug is the same Modrinth identifier used when adding the project (e.g., "sodium" for the Sodium mod).</p>
+
+        <h3>/addping</h3>
+        <p>Add a role or user to be pinged when specific mod updates are available. This ensures important updates aren't missed.</p>
+
+        <h3>/removeping</h3>
+        <p>Remove a role or user from receiving ping notifications for mod updates.</p>
+
+        <h3>/listprojects</h3>
+        <p>View a list of all mods and modpacks currently being tracked in your server.</p>
+
+    </main>
+
+    <footer class="footer">
+        <p>Website and Bot developed by RoyalQuack</p>
+        <p>Join our community: <a href="https://discord.quackstudios.dev/" target="_blank">QuackStudios Discord</a></p>
+    </footer>
+</body>
+</html>
