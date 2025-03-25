@@ -95,6 +95,32 @@
         .footer a:hover {
             color: #5b6eae;
         }
+
+        /* Image toggle styles */
+        .image-container {
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .toggle-button {
+            background-color: #7289da;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-button:hover {
+            background-color: #5b6eae;
+        }
+
+        .image-hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -107,29 +133,55 @@
         <p>Welcome to the ModMonitor documentation! Here you'll find everything you need to know about using ModMonitor to track and manage your Minecraft mod updates.</p>
 
         <h2>API support</h2>
-        <p>Currently ModMonitor only supports mods and modpacks uploaded on <a href="https://modrinth.com" target="_blank">Modrinth</a>.</p>
-        <p>Curseforge support is coming soon, Join our <a href="https://discord.quackstudios.dev/" target="_blank">Discord server</a> for updates.</p>
+        <p>ModMonitor is made for Mods and Modpacks but can send notifications for any project uploaded on <a href="https://modrinth.com" target="_blank">Modrinth</a> and <a href="https://curseforge.com" target="_blank">Curseforge</a></p>
 
         <h2>Getting Started</h2>
         <p>To start using ModMonitor, invite the bot to your Discord server using the invite link on our homepage. Once the bot is in your server, you can use the following commands:</p>
 
         <h3>/monitorhere</h3>
         <p>Set up the current channel as a notification channel for mod updates. This is where ModMonitor will send notifications about mod updates.</p>
+        <div class="image-container">
+            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
+            <img src="monitorhere.png" alt="image" class="image-hidden">
+        </div>
 
         <h3>/addproject</h3>
-        <p>Add a new mod or modpack to tracking through <a href="https://modrinth.com" target="_blank">Modrinth</a>. The command format is <code>/addproject [slug]</code>, where the slug can be found in the mod's Modrinth URL (e.g., for https://modrinth.com/mod/sodium, the slug would be "sodium"). ModMonitor checks for updates every minute to ensure you're always notified of the latest versions.</p>
+        <p>When adding a project you will be asked if you want to connect a modrinth or curseforge project. </p>
+        <p>When using modrinth(<b>/addproject modrinth</b>) add the slug of a project after "modrinth" the slug of a project is found at the end of the link https://modrinth.com/mod/<b>sodium</b> the slug in the case is sodium. <b>/addproject modrinth sodium</b>. The same applys for modpacks https://modrinth.com/modpack/<b>aged</b>, this makes"aged" is the slug.</p>
+        <p>When using curseforge(<b>/addproject curseforge</b>) add the project-id after "curseforge", the project-id is found in the "about project", with the id example usage is <b>/addproject curseforge 1214703</b></p>
+        <img src="projectid.png" alt="image" width="800" height="400">
+        <div class="image-container">
+            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
+            <img src="added.png" alt="image" width="300" height="150" class="image-hidden">
+        </div>
 
         <h3>/removeproject</h3>
-        <p>Remove a mod or modpack from your tracking list. The command format is <code>/removeproject [slug]</code>, where the slug is the same Modrinth identifier used when adding the project (e.g., "sodium" for the Sodium mod).</p>
+        <p>When removing a project the same formatting as <b>/addproject</b>. Please refer to it </p>
+        <div class="image-container">
+            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
+            <img src="removed.png" alt="image" width="300" height="150" class="image-hidden">
+        </div>
 
         <h3>/addping</h3>
         <p>Add a role or user to be pinged when specific mod updates are available. This ensures important updates aren't missed.</p>
+        <div class="image-container">
+            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
+            <img src="pingadd.png" alt="image" width="500" height="100" class="image-hidden">
+        </div>
 
         <h3>/removeping</h3>
         <p>Remove a role or user from receiving ping notifications for mod updates.</p>
+        <div class="image-container">
+            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
+            <img src="pingremove.png" alt="image" width="300" height="100" class="image-hidden">
+        </div>
 
         <h3>/listprojects</h3>
         <p>View a list of all mods and modpacks currently being tracked in your server.</p>
+        <div class="image-container">
+            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
+            <img src="listprojects.png" alt="image" class="image-hidden">
+        </div>
 
     </main>
 
@@ -137,5 +189,18 @@
         <p>Website and Bot developed by RoyalQuack</p>
         <p>Join our community: <a href="https://discord.quackstudios.dev/" target="_blank">QuackStudios Discord</a></p>
     </footer>
+
+    <script>
+        function toggleImage(button) {
+            const img = button.nextElementSibling;
+            if (img.classList.contains('image-hidden')) {
+                img.classList.remove('image-hidden');
+                button.textContent = 'Hide Image';
+            } else {
+                img.classList.add('image-hidden');
+                button.textContent = button.textContent.replace('Hide', 'Show');
+            }
+        }
+    </script>
 </body>
 </html>
