@@ -140,62 +140,58 @@
 
         <h3>/monitorhere</h3>
         <p>Set up the current channel as a notification channel for mod updates. This is where ModMonitor will send notifications about mod updates.</p>
-        <div class="image-container">
-            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
-            <img src="monitorhere.png" alt="image" class="image-hidden">
-        </div>
 
         <h3>/addproject</h3>
         <p>When adding a project you will be asked if you want to connect a modrinth or curseforge project. </p>
         <p>When using modrinth(<b>/addproject modrinth</b>) add the slug of a project after "modrinth" the slug of a project is found at the end of the link https://modrinth.com/mod/<b>sodium</b> the slug in the case is sodium. <b>/addproject modrinth sodium</b>. The same applys for modpacks https://modrinth.com/modpack/<b>aged</b>, this makes"aged" is the slug.</p>
         <p>When using curseforge(<b>/addproject curseforge</b>) add the project-id after "curseforge", the project-id is found in the "about project", with the id example usage is <b>/addproject curseforge 1214703</b></p>
         <img src="projectid.png" alt="image" width="800" height="400">
-        <div class="image-container">
-            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
-            <img src="added.png" alt="image" width="300" height="150" class="image-hidden">
-        </div>
 
         <h3>/removeproject</h3>
         <p>When removing a project the same formatting as <b>/addproject</b>. Please refer to it </p>
-        <div class="image-container">
-            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
-            <img src="removed.png" alt="image" width="300" height="150" class="image-hidden">
-        </div>
-
-        <h3>/addallping</h3>
-        <p>Add a role or user to be pinged when a mod/modpack has been updated and that mod/modpack doesnt have a specific ping set. This ensures important updates aren't missed.</p>
-        <div class="image-container">
-            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
-            <img src="pingadd.png" alt="image" width="500" height="100" class="image-hidden">
-        </div>
-
-        <h3>/removeallping</h3>
-        <p>Remove a role or user from receiving ping notifications when a mod/modpack has been updated and that mod/modpack doesnt have a specific ping set.</p>
-        <div class="image-container">
-            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
-            <img src="pingremove.png" alt="image" width="300" height="100" class="image-hidden">
-        </div>
-
-        <h3>/addprojectping</h3>
-        <p>Add a role to be pinged when a specific project gets updated, when this is set for a project <b>/addallping</b> will be ignored for that project.</p>
-        <div class="image-container">
-            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
-            <img src="projectpingadd.png" alt="image" width="500" height="100" class="image-hidden">
-        </div>
-
-        <h3>/removeprojectping</h3>
-        <p>Remove a role from being pinged when a specific project gets updated. When done that project will default to <b>/addallping</b>.</p>
-        <div class="image-container">
-            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
-            <img src="projectpingremove.png" alt="image" width="300" height="100" class="image-hidden">
-        </div>
 
         <h3>/listprojects</h3>
         <p>View a list of all mods and modpacks currently being tracked in your server.</p>
-        <div class="image-container">
-            <button class="toggle-button" onclick="toggleImage(this)">Show Example Image</button>
-            <img src="listprojects.png" alt="image" class="image-hidden">
-        </div>
+
+
+        <h2>Grouping</h2>
+        <p>Grouping allows you to group multiple projects together to receive combined notifications instead of multiple. This is useful for projects uploaded on both modrinth and curseforge.</p>
+
+        <h3>/creategroup</h3>
+        <p>Group multiple projects from both modrinth and curseforge together to recieve combined notifications instead of multiple. Most useful for projects uploaded on both modrinth and curseforge.(When creating a group name it is space and case sensitive)</p>
+
+        <h3>/removegroup</h3>
+        <p>Delete a grouping(does not delete projects, only the group itself)(name is space and case sensitive)</p>
+
+        <h3>/listgroups</h3>
+        <p>View a list of all groups currently created in your server.</p>
+
+
+        <h2>Pinging Roles</h2>
+        <p>ModMonitor allows you to ping specific roles or users when a mod or modpack is updated. This ensures important updates are not missed.</p>
+
+        <h3>/addallping</h3>
+        <p>Add a role or user to be pinged when a mod/modpack has been updated and that mod/modpack doesnt have a specific ping set. This ensures important updates aren't missed.</p>
+
+        <h3>/removeallping</h3>
+        <p>Remove a role or user from receiving ping notifications when a mod/modpack has been updated and that mod/modpack doesnt have a specific ping set.</p>
+
+
+        <h3>/addprojectping</h3>
+        <p>Add a role to be pinged when a specific project gets updated, when this is set for a project <b>/addallping</b> will be ignored for that project.</p>
+
+
+        <h3>/removeprojectping</h3>
+        <p>Remove a role from being pinged when a specific project gets updated. When done that project will default to <b>/addallping</b>.</p>
+
+
+        <h3>/addgroup_ping</h3>
+        <p>Add a role to be pinged when a specific group gets updated, when this is set for a group <b>/addallping</b> will be ignored for that project.(name is space and case sensitive)</p>
+
+        <h3>/removegroup_ping</h3>
+        <p>Remove a role from being pinged when a specific group gets updated. When done that project will default to <b>/addallping</b>. (name is space and case sensitive)</p>
+
+
 
     </main>
 
